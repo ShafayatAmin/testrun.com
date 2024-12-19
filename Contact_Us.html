@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | TMKM Class 10</title>
+    <link rel="icon" href="icon.jpg" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Translate API -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,bn', // English and Bengali
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <style>
+        /* lol */
+body {
+    background-color: #f4f4f4;
+    background: url('https://wallpapercave.com/wp/wp6944255.jpg') no-repeat center center fixed;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin: 0;
+}
+#google_translate_element {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
+        padding: 5px;
+        color: #fff;
+        font-size: 14px;
+    }
+
+        .centered-text {
+        font-size: 48px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: linear-gradient(90deg, red, yellow, green, cyan, blue, magenta);
+        background-size: 300% 300%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient-animation 3s infinite;
+        text-decoration: none;
+    }
+
+    @keyframes gradient-animation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    #google_translate_element {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
+        padding: 5px;
+        color: #fff;
+        font-size: 14px;
+    }
+
+/* Style for the text link */
+.centered-text {
+    font-size: 48px;  
+    font-weight: bold;
+    text-transform: uppercase;
+    color:rgb(222, 238, 238); /* Default text color */
+    text-decoration: none;  /* Remove underline */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect and glowing effect */
+.centered-text:hover {
+    color: #00ffff; /* Change text color on hover */
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Glowing text effect */
+}
+        
+
+        .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        position: fixed;
+        top: 50px;
+        left: 20px;
+        z-index: 100;
+    }
+
+    .hamburger-menu div {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        border-radius: 5px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .hamburger-menu.open div:nth-child(1) {
+        transform: rotate(45deg) translateY(10px);
+    }
+
+    .hamburger-menu.open div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.open div:nth-child(3) {
+        transform: rotate(-45deg) translateY(-10px);
+    }
+
+    .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Make sure it's fully hidden */
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease; /* Smooth slide-in and out */
+    z-index: 99;
+}
+
+.sidebar.open {
+    left: 0; /* Slide back into view */
+}
+
+
+    .sidebar a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        margin: 15px 0;
+        font-size: 18px;
+        transition: color 0.3s ease;
+    }
+
+    .sidebar a:hover {
+        color: lightblue;
+    }
+    .sidebar a.logout {
+    background-color: red; /* Red background for logout */
+    color: white;  /* Keep text color white */
+    padding: 10px; /* Add padding for better spacing */
+    border-radius: 5px; /* Rounded corners */
+}
+
+    .sidebar a.logout:hover {
+    background-color: darkred; /* Darker red on hover */
+    color: white; /* Keep text color white on hover */
+}
+
+/* Container for stacking the boxes vertically */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* From Uiverse.io by StealthWorm */ 
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  overflow: hidden;
+  height: 3rem;
+  background-size: 300% 300%;
+  cursor: pointer;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  transition: 0.5s;
+  animation: gradient_301 5s ease infinite;
+  border: double 4px transparent;
+  background-image: linear-gradient(#212121, #212121),
+    linear-gradient(
+      137.48deg,
+      #ffdb3b 10%,
+      #fe53bb 45%,
+      #8f51ea 67%,
+      #0044ff 87%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+#container-stars {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+}
+
+strong {
+  z-index: 2;
+  font-family: "Avalors Personal Use";
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  text-shadow: 0 0 4px white;
+}
+
+#glow {
+  position: absolute;
+  display: flex;
+  width: 12rem;
+}
+
+.circle {
+  width: 100%;
+  height: 30px;
+  filter: blur(2rem);
+  animation: pulse_3011 4s infinite;
+  z-index: -1;
+}
+
+.circle:nth-of-type(1) {
+  background: rgba(254, 83, 186, 0.636);
+}
+
+.circle:nth-of-type(2) {
+  background: rgba(142, 81, 234, 0.704);
+}
+
+.btn:hover #container-stars {
+  z-index: 1;
+  background-color: #212121;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.btn:active {
+  border: double 4px #fe53bb;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  animation: none;
+}
+
+.btn:active .circle {
+  background: #fe53bb;
+}
+
+#stars {
+  position: relative;
+  background: transparent;
+  width: 200rem;
+  height: 200rem;
+}
+
+#stars::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -100rem;
+  width: 100%;
+  height: 100%;
+  animation: animStarRotate 90s linear infinite;
+}
+
+#stars::after {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+}
+
+#stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 170%;
+  height: 500%;
+  animation: animStar 60s linear infinite;
+}
+
+#stars::before {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+  opacity: 0.5;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-135rem);
+  }
+}
+
+@keyframes animStarRotate {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes gradient_301 {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse_3011 {
+  0% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+
+
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.85); /* Dark background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 20px 0; /* Top and bottom padding */
+    width: 100%; /* Full width */
+    position: fixed; /* Fixed position */
+    bottom: 0; /* Stick to bottom */
+    left: 0; /* Align to the left */
+    font-size: 14px; /* Text size */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); /* Light shadow on top */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="google_translate_element" style="position: fixed; top: 10px; right: 10px;"></div>
+        
+        <a href="index.html" class="centered-text">TMKM Class 10</a>
+    </header>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+     <!-- Sidebar Menu -->
+     <div class="sidebar" id="sidebar"><br><br><br>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="Teachers_Info.html"><i class="fas fa-chalkboard-teacher"></i> Teachers Info</a>
+      <a href="Class_Routine.html"><i class="fas fa-calendar-alt"></i> Class Routine</a>
+      <a href="All_Books_PDF.html"><i class="fas fa-book"></i> All Books PDF</a>
+      <a href="Special_Announcements.html"><i class="fas fa-bullhorn"></i> Special Announcements</a>
+      <a href="Feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a>
+      <a href="Contact_Us.html"><i class="fas fa-phone-alt"></i> Contact Us</a>
+  </div>
+
+
+
+
+<a href="shafu.html"><button type="button" class="btn">
+  <strong>Contact Web Developer</strong>
+  <div id="container-stars">
+    <div id="stars"></div>
+  </div>
+
+  <div id="glow">
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+</button></a><br>
+
+<h1 style="color: black;">OR</h1><br>
+
+<a href="tmkm.html"><button type="button" class="btn">
+  <strong>Contact Us</strong>
+  <div id="container-stars">
+    <div id="stars"></div>
+  </div>
+
+  <div id="glow">
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+</button></a>
+
+
+
+     <!-- Footer Section -->
+     <footer>
+        <p>&copy; 2025 TMKM Class 10. All rights reserved.</p>
+    </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+const sidebar = document.getElementById('sidebar');
+
+// Toggle sidebar on hamburger click
+hamburger.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevent the click from triggering the document listener
+    hamburger.classList.toggle('open');
+    sidebar.classList.toggle('open');
+});
+
+// Close sidebar when clicking anywhere else on the screen
+document.addEventListener('click', (event) => {
+    // Check if sidebar is open and the click is outside the sidebar or hamburger
+    if (sidebar.classList.contains('open') && !sidebar.contains(event.target) && !hamburger.contains(event.target)) {
+        hamburger.classList.remove('open');
+        sidebar.classList.remove('open');
+    }
+});
+
+    </script>
+    
+</body>
+</html>
